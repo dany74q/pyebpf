@@ -136,6 +136,6 @@ while True:
 
 Here are a few eBPF-related resources that I found useful during the writing of this library:
 
-1. http://www.brendangregg.com/ebpf.htmlv
+1. http://www.brendangregg.com/ebpf.html
 2. https://bolinfest.github.io/opensnoop-native
 3. https://github.com/iovisor/bcc
