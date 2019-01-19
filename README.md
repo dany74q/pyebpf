@@ -12,7 +12,7 @@ just as you would have with bcc's BPF library, in case you need the functionalit
 
 [1] See 'How does this library work ?' below
 
-#### What is eBPF
+### What is eBPF
 
 Extended-Berkeley-Packet-Filters are a superset of BPF filters (traditionally available for packet-filtering), that lets you 
 write small kernel-routines, using a dedicated eBPF instruction set.
@@ -28,7 +28,7 @@ and once your probe is attached, your eBPF routine will be invoked appropriately
 Sharing data between eBPF routines, or between an eBPF routine and user-space, is possible via eBPF maps,
 which operate on top of a FD that lets one communicate between those two ends.
 
-#### What is IOVisor / BCC
+### What is IOVisor / BCC
 
 BCC (BPF Compiler Collection) is a toolkit that helps you generate and use BPF routine in a user-friendly manner.
 
@@ -39,7 +39,7 @@ Code generation is managed by LLVM, hence you need an appropriate version instal
 
 More about the project [here](https://github.com/iovisor/bcc).  
 
-#### How does this library work ?
+### How does this library work ?
 
 Given an event to attach a kernel-probe to, this library will (In order):
 
@@ -65,7 +65,7 @@ Thus, on any event your kernel probe attaches to, an internal BPF routine will b
 it will copy all relevant members via the constructed data structure back to user mode via the BPF structure. 
 Then, an internal python thread will poll on said structure, and will call the registered python callback.   
 
-#### Using this wrapper effectively
+### Using this wrapper effectively
 
 First, install the library via:
 
@@ -92,9 +92,6 @@ while True:
         print 'Bye !'
         break
         
-
-
-
 b = EBPFWrapper()
 print 'COMM PID SOCKETFD'
 
@@ -135,7 +132,7 @@ while True:
         break
 ```
 
-#### eBPF related resources
+### eBPF related resources
 
 Here are a few eBPF-related resources that I found useful during the writing of this library:
 
