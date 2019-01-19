@@ -9,8 +9,8 @@ from collections import OrderedDict
 from threading import Thread, Event, _Event, current_thread
 
 from bcc import BPF
-from helpers import assert_type
-from normalizers import normalize_event
+from pyebpf.helpers import assert_type
+from pyebpf.normalizers import normalize_event
 
 
 class EBPFProgramDescriptor(object):
