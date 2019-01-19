@@ -10,7 +10,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name='pyebpf',
-    version='1.0.2',
+    version='1.0.3',
     description='A bcc-based Python eBPF (Extended-Berkeley-Packet-Filter) wrapper',
     long_description=long_description,  # Optional
     long_description_content_type='text/markdown',  # Optional (see note above)
@@ -31,7 +31,6 @@ setup(
     ],
     keywords='bpf ebpf',
     packages=find_packages(),
-    install_requires=['bcc'],
     project_urls={  # Optional
         'Bug Reports': 'https://github.com/dany74q/pyebpf/issues',
         'Source': 'https://github.com/dany74q/pyebpf/',
