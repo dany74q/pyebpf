@@ -9,6 +9,7 @@ from collections import OrderedDict
 from threading import Thread, Event, _Event, current_thread
 
 from bcc import BPF
+
 from pyebpf.helpers import assert_type
 from pyebpf.normalizers import normalize_event
 
@@ -130,7 +131,7 @@ class EBPFWrapper(BPF):
         NativeArgument('u32', 'thread_id', ct.c_uint32),
         NativeArgument('u32', 'group_id', ct.c_uint32),
         NativeArgument('u32', 'user_id', ct.c_uint32),
-        NativeArgument('char*', 'process_name', (ct.c_char * 24)),
+        NativeArgument('char*', 'process_name', (ct.c_char * 16)),
     ]
 
     # A string representing a type, or a byte size - to a ctypes type
@@ -167,8 +168,8 @@ class EBPFWrapper(BPF):
 
         self._attached_kprobes = {}
 
-        debug = kwargs.get('debug', False)
-        self.logger.setLevel(logging.DEBUG if debug else logging.INFO)
+        log_level = kwargs.get('log_level', logging.INFO)
+        self.logger.setLevel(log_level)
 
         if kwargs:
             self.logger.debug('Arguments were passed during init - will instantiate parent')
