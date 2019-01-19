@@ -14,7 +14,7 @@ setup(
     description='A bcc-based Python eBPF (Extended-Berkeley-Packet-Filter) wrapper',
     long_description=long_description,  # Optional
     long_description_content_type='text/markdown',  # Optional (see note above)
-    url='https://github.com/dany74a/pyebpf',
+    url='https://github.com/dany74q/pyebpf',
     author='Danny Shemesh (dany74q)',
     author_email='dany74q@gmail.com',
     classifiers=[
