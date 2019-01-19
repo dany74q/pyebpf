@@ -5,7 +5,7 @@ A bcc-based, eBPF (Extended-Berkeley-Packet-Filter) wrapper for Python.
 This small library serves two main purposes:
 
 1. It lets you attach BPF kernel probes without writing native code
-2. It lets you write BPF routine callbacks in Python ([1])
+2. It lets you write BPF routine callbacks in Python [1]
 
 You may still write, compile and use your native routines 
 just as you would have with bcc's BPF library, in case you need the functionality.
