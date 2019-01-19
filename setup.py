@@ -10,7 +10,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name='pyebpf',
-    version='1.0.3',
+    version='1.0.4',
     description='A bcc-based Python eBPF (Extended-Berkeley-Packet-Filter) wrapper',
     long_description=long_description,  # Optional
     long_description_content_type='text/markdown',  # Optional (see note above)

@@ -2,6 +2,8 @@
 
 A bcc-based, eBPF (Extended-Berkeley-Packet-Filter) wrapper for Python.
 
+*Note*: Using this library requires a working installation of BCC, please refer to this [guide](https://github.com/iovisor/bcc/blob/master/INSTALL.md).
+
 This small library serves two main purposes:
 
 1. It lets you attach BPF kernel probes without writing native code
@@ -139,3 +141,4 @@ Here are a few eBPF-related resources that I found useful during the writing of 
 1. http://www.brendangregg.com/ebpf.html
 2. https://bolinfest.github.io/opensnoop-native
 3. https://github.com/iovisor/bcc
+4. https://lwn.net/Articles/740157/
